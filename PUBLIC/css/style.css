@@ -1,0 +1,1397 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */ }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.clearfix:after, .page section .specs-nav:after, footer > div:first-of-type:after, footer > div:first-of-type ul:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.visuallyhidden, header a h1 span, .home .slider div p, .home .slider div ul, .home section article h2, .home section p, .home .promos, .page .video h2 {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
+
+html {
+  font-size: 18px; }
+
+body {
+  font: 300 18px/1.4 "Source Sans Pro", sans-serif; }
+
+.wrap {
+  padding: 0 5.625%; }
+
+h1 {
+  color: #111111;
+  font-family: "Rosario";
+  font-size: 1.875em;
+  font-weight: normal;
+  line-height: 1.1em;
+  margin: 2.8rem 0 1.4rem 0;
+  padding: 0;
+  text-align: center; }
+  h1 span {
+    color: #0095da;
+    display: block;
+    font-family: "Rosario";
+    font-size: 0.6em;
+    line-height: 1.24444em;
+    margin: 0.7rem 0 1.4rem; }
+
+h2 {
+  color: #0095da;
+  font-family: "Rosario";
+  font-size: 1.125em;
+  font-weight: normal;
+  line-height: 1.24444em;
+  margin: 1.4rem 0;
+  text-align: left; }
+
+h3 {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 0; }
+
+p {
+  margin: 0;
+  margin-bottom: 1.4em;
+  text-align: left; }
+
+ul {
+  margin: 1.4em 0;
+  padding: 0; }
+  ul li {
+    list-style-type: square; }
+
+a {
+  color: #ff3300;
+  text-decoration: none; }
+
+img {
+  display: block;
+  width: 100%; }
+
+section {
+  position: relative; }
+
+header {
+  background: #005789;
+  border-top: 3px solid #0095da;
+  width: 100%; }
+  header a {
+    display: block;
+    margin: auto;
+    padding: 0.7em 0;
+    width: 66.6666%; }
+    header a h1 {
+      background: url("../img/cetacea-sound-logo.svg") no-repeat center center;
+      background-size: contain;
+      border: none;
+      font-size: 1em;
+      margin: 0;
+      padding: 1.4em 0; }
+  header .hamburger {
+    position: absolute;
+    left: 5.625%;
+    top: 1.7em;
+    width: 1.25em; }
+    header .hamburger img {
+      width: 100%; }
+  header nav {
+    background: #005789;
+    display: none; }
+    header nav form {
+      color: #111111;
+      padding: 0.7em 0;
+      position: relative; }
+      header nav form input {
+        background: #ededed;
+        border-radius: 0.7em;
+        border: 1px solid #ffffff;
+        padding: 0.25em 2.5em 0.25em 1.4em;
+        width: 100%; }
+        header nav form input::-webkit-input-placeholder {
+          color: #999999; }
+        header nav form input:-moz-placeholder {
+          /* Firefox 18- */
+          color: #999999; }
+        header nav form input::-moz-placeholder {
+          /* Firefox 19+ */
+          color: #999999; }
+        header nav form input:-ms-input-placeholder {
+          color: #999999; }
+      header nav form button {
+        background: url("../img/search-icon.svg") no-repeat;
+        background-size: 20px 20px;
+        background-position: 0 2px;
+        border: none;
+        padding: 0.7em;
+        position: absolute;
+        right: 0.75em;
+        top: 0.9em; }
+    header nav ul {
+      font-weight: bold;
+      margin: 0;
+      padding-bottom: 1em; }
+      header nav ul li {
+        color: #ffffff;
+        list-style-type: none;
+        margin-bottom: 1em;
+        text-transform: uppercase; }
+        header nav ul li:last-of-type {
+          margin-bottom: 0; }
+        header nav ul li ul {
+          padding-bottom: 0; }
+          header nav ul li ul li {
+            font-size: 0.875em;
+            line-height: 1.6em;
+            padding-left: 6.875%;
+            margin: 0; }
+            header nav ul li ul li:first-of-type {
+              margin-top: 0.4em; }
+            header nav ul li ul li a {
+              color: #ffffff;
+              display: block;
+              height: 100%;
+              padding: 0.4em 0;
+              text-transform: none;
+              width: 100%; }
+    header nav .lit-menu {
+      text-transform: none; }
+      header nav .lit-menu a {
+        display: inline-block;
+        padding: 0.4em;
+        text-decoration: underline;
+        width: auto; }
+    header nav .desktop-search {
+      display: none; }
+
+.home {
+  text-align: center; }
+  .home .slider {
+    min-height: 430px; }
+    .home .slider div {
+      background: #ffffff; }
+      .home .slider div h2 {
+        color: #111111;
+        font-family: "Rosario";
+        font-size: 1.875rem;
+        line-height: 0.8em;
+        margin: 3rem 1.5rem 0.75rem 1.5rem; }
+        .home .slider div h2 span {
+          color: #111111;
+          display: block;
+          font-family: "Source Sans Pro", sans-serif;
+          font-size: 1rem;
+          font-weight: 300;
+          line-height: 1.5em;
+          margin-top: 0.75em;
+          padding-bottom: 0.75em; }
+      .home .slider div img {
+        width: 100%; }
+    .home .slider .slick-dots {
+      background: #ffffff;
+      bottom: 0;
+      line-height: 20px; }
+  .home section h1 {
+    color: #005789;
+    font-family: "Rosario";
+    font-size: 1.125em;
+    line-height: 1.3333em;
+    margin: 0 0.625em;
+    padding-top: 1.5rem; }
+  .home section article {
+    margin: 3em 0 3em; }
+    .home section article:last-of-type {
+      margin-bottom: 0; }
+    .home section article > a {
+      display: block; }
+      .home section article > a img {
+        width: 100%; }
+  .home section ol {
+    padding: 0; }
+    .home section ol li {
+      font-size: 0.875em;
+      line-height: 1.71428571428571em;
+      list-style: none;
+      padding: 0 0.75rem 0 3rem;
+      position: relative;
+      margin-bottom: 0.75rem;
+      text-align: left; }
+      .home section ol li span {
+        background: #005789;
+        border-radius: 50%;
+        color: #ffffff;
+        display: inline-block;
+        height: 1.5rem;
+        left: 0.75rem;
+        position: absolute;
+        text-align: center;
+        width: 1.5rem; }
+
+.page .category-headline {
+  background: #b2b2b2;
+  border-top: 1px solid #ffffff;
+  color: #ffffff;
+  font-family: "Source Sans Pro";
+  font-size: 1em;
+  line-height: 1.4em;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 0;
+  padding: 0.375em; }
+.page .mobile-img {
+  margin: 1.4em 0; }
+.page .desktop-img {
+  display: none; }
+.page .diagram {
+  border: 1px solid #ededed;
+  margin-bottom: 1.4em;
+  padding: 1.4em; }
+  .page .diagram p {
+    font-weight: bold;
+    text-align: center; }
+.page .left-nav {
+  display: none; }
+.page .img-padding, .page .img-padding2, .page .img-padding3 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%; }
+.page .img-padding2 {
+  width: 40%; }
+.page .img-padding3 {
+  width: 80%; }
+.page .margin-bottom {
+  margin-bottom: 1.4em; }
+.page .img-margin-top {
+  margin-top: 1.4em; }
+.page .img-row {
+  display: block;
+  float: left;
+  margin-right: 5.625%;
+  padding: 0 5.625%;
+  width: 29.58333%; }
+  .page .img-row:last-of-type {
+    margin-right: 0; }
+.page .video {
+  position: relative; }
+  .page .video img {
+    display: block; }
+  .page .video iframe {
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: -99; }
+.page .systems h3 {
+  border-top: 1px solid #ededed;
+  font-weight: bold;
+  margin-bottom: 1.4em;
+  padding-top: 1.4em;
+  text-align: center; }
+  .page .systems h3 span {
+    display: block;
+    font-size: 0.875em;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 1.6em; }
+.page .systems .row div:first-of-type h3 {
+  border: none;
+  padding-top: 0; }
+.page .documents ul {
+  padding: 0; }
+  .page .documents ul li {
+    list-style-type: none; }
+.page section > img {
+  display: block; }
+.page section .row .row {
+  height: auto; }
+  .page section .row .row .gallery-item:last-of-type {
+    margin-bottom: 0; }
+.page section blockquote {
+  font-style: italic;
+  margin: 0 0 1.4em; }
+  .page section blockquote figcaption {
+    line-height: 1.4em;
+    margin: 1.4em 0; }
+.page section article {
+  border-top: 1px solid #ededed;
+  margin-bottom: 1.4em; }
+  .page section article:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 1.4em; }
+  .page section article p span {
+    display: block;
+    font-weight: bold; }
+  .page section article .notice {
+    background: #ededed;
+    padding: 5%; }
+    .page section article .notice span {
+      display: block; }
+  .page section article .link-p a {
+    font-size: 0.875em;
+    line-height: 1.6em; }
+  .page section article ul {
+    margin-top: 0;
+    padding: 0 1.4em; }
+    .page section article ul li span {
+      display: block;
+      font-weight: 600; }
+  .page section article .list-item-margin {
+    margin-bottom: 1.4em; }
+  .page section article ol {
+    font-size: 0.875em;
+    line-height: 1.6em;
+    margin: 1.4rem;
+    padding: 0;
+    text-align: left; }
+    .page section article ol li {
+      list-style-type: decimal; }
+  .page section article figcaption {
+    line-height: 1.4em;
+    margin: 1.4em 0; }
+  .page section article img {
+    display: block;
+    margin-bottom: 1.4em; }
+.page section .specs-imgOff {
+  display: none; }
+.page section .specs-nav ul {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 0; }
+  .page section .specs-nav ul li {
+    background: #0095da;
+    color: #ffffff;
+    float: left;
+    list-style-type: none;
+    padding: 0.7rem 0;
+    text-align: center;
+    width: 50%; }
+  .page section .specs-nav ul .specs-navOff {
+    background: #ededed;
+    color: #999999; }
+.page section .specs {
+  border-top: none;
+  clear: both;
+  display: none;
+  margin-top: 1.4em; }
+  .page section .specs h3 {
+    border-bottom: 1px solid #ededed; }
+  .page section .specs p {
+    font-size: 0.875em;
+    line-height: 1.6em;
+    margin-bottom: 1.6em; }
+  .page section .specs ul {
+    font-size: 0.875em;
+    line-height: 1.6em;
+    margin: 0 0 1.6em; }
+.page section .link-box {
+  display: block;
+  margin: 1.5em auto;
+  width: 93.75%; }
+.page section .applications ul {
+  padding: 0; }
+  .page section .applications ul .row div li {
+    list-style-type: none;
+    padding-left: 25%; }
+    .page section .applications ul .row div li img {
+      width: 10%; }
+    .page section .applications ul .row div li span {
+      display: block;
+      font-weight: bold; }
+  .page section .applications ul .row:first-of-type div:first-of-type li {
+    background: url("../img/projector-icon.svg") no-repeat left top;
+    background-size: 20%; }
+  .page section .applications ul .row:first-of-type div:nth-of-type(2) li {
+    background: url("../img/voice-icon.svg") no-repeat left top;
+    background-size: 20%; }
+  .page section .applications ul .row:nth-of-type(2) div:first-of-type li {
+    background: url("../img/multimedia-icon.svg") no-repeat left top;
+    background-size: 20%; }
+  .page section .applications ul .row:nth-of-type(2) div:nth-of-type(2) li {
+    background: url("../img/360-icon.svg") no-repeat left top;
+    background-size: 20%; }
+.page section .gallery div > div {
+  border-bottom: 1px solid #ededed;
+  height: 4.2em;
+  overflow: hidden;
+  position: relative; }
+  .page section .gallery div > div:last-of-type {
+    border-bottom: none;
+    margin-bottom: 1.4em; }
+  .page section .gallery div > div .thb-overlay {
+    background: rgba(0, 87, 137, 0.85);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 100; }
+  .page section .gallery div > div p {
+    bottom: 0;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0 1em;
+    position: absolute;
+    z-index: 101; }
+  .page section .gallery div > div img {
+    display: block;
+    padding-top: 1.4em;
+    margin-bottom: 0;
+    position: absolute; }
+  .page section .gallery div > div i {
+    color: #ffffff;
+    display: block;
+    font-size: 1.125em;
+    font-style: normal;
+    line-height: 1.10617em;
+    margin: 1.4em 0;
+    position: absolute;
+    right: 0.88889em;
+    z-index: 101; }
+    .page section .gallery div > div i:after {
+      content: "+"; }
+.page section .gallery nav {
+  display: none; }
+.page section .gallery figure {
+  display: none; }
+.page section .gallery .main-gallery-image {
+  display: none; }
+.page section .gallery .accordion {
+  height: initial;
+  overflow: initial;
+  padding-bottom: 2.8em; }
+  .page section .gallery .accordion .thb-overlay {
+    height: 0; }
+  .page section .gallery .accordion p {
+    color: #111111;
+    font-weight: bold;
+    margin: 0 0 0.7em;
+    text-align: center;
+    width: 100%; }
+  .page section .gallery .accordion img {
+    position: initial; }
+  .page section .gallery .accordion i {
+    color: #111111;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    top: 0; }
+    .page section .gallery .accordion i:after {
+      content: "x"; }
+.page section .drawer-menu {
+  background: #0095da;
+  border-bottom: 1px solid #ededed;
+  bottom: 0;
+  color: #ffffff;
+  display: none;
+  position: fixed;
+  width: 100%;
+  z-index: 200; }
+  .page section .drawer-menu div {
+    height: 2.22222em; }
+    .page section .drawer-menu div div {
+      padding-top: 0.6em;
+      margin: auto;
+      width: 1.6em; }
+  .page section .drawer-menu ul {
+    background: #0095da;
+    bottom: 100%;
+    display: none;
+    margin: 0;
+    position: absolute;
+    width: 100%; }
+    .page section .drawer-menu ul li {
+      border-bottom: 1px solid #ffffff;
+      list-style-type: none; }
+      .page section .drawer-menu ul li a {
+        color: #ffffff;
+        display: block;
+        font-size: 0.77778em;
+        font-weight: bold;
+        line-height: 1.4em;
+        padding: 0.8em 5%;
+        position: relative;
+        width: 100%; }
+        .page section .drawer-menu ul li a img {
+          position: absolute;
+          right: 5%;
+          top: 0.75em;
+          width: 0.8em; }
+      .page section .drawer-menu ul li:last-of-type {
+        margin-bottom: 1em; }
+      .page section .drawer-menu ul li .active {
+        background: #005789;
+        color: #ffffff; }
+        .page section .drawer-menu ul li .active img {
+          display: none; }
+@media screen and (min-height: 415px) {
+  .page section .drawer-menu {
+    display: block; } }
+.page section table {
+  margin: 1.5em 0; }
+  .page section table thead {
+    background: #999999;
+    color: #ffffff;
+    font-size: 0.875em;
+    line-height: 1.6em;
+    text-align: center;
+    text-transform: uppercase; }
+  .page section table tbody {
+    font-size: 0.75rem;
+    text-align: center; }
+    .page section table tbody tr {
+      border-bottom: 1px solid #ededed; }
+      .page section table tbody tr th {
+        background: #ededed;
+        padding: 0.4rem; }
+      .page section table tbody tr td {
+        padding: 0.4rem;
+        border-right: 1px solid #ededed; }
+        .page section table tbody tr td:first-of-type {
+          border-left: 1px solid #ededed; }
+
+footer {
+  text-align: center; }
+  footer a {
+    display: block; }
+  footer > div:first-of-type {
+    background: #ededed; }
+    footer > div:first-of-type ul {
+      margin: 0; }
+      footer > div:first-of-type ul li {
+        float: left;
+        font-weight: bold;
+        height: 2.8em;
+        list-style-type: none;
+        width: 50%; }
+        footer > div:first-of-type ul li:nth-child(odd) {
+          border-right: 1px solid #ffffff; }
+        footer > div:first-of-type ul li:first-child {
+          border-bottom: 1px solid #ffffff; }
+        footer > div:first-of-type ul li:nth-child(2) {
+          border-bottom: 1px solid #ffffff; }
+        footer > div:first-of-type ul li a {
+          color: #0095da;
+          font-size: 0.875em;
+          height: 100%;
+          line-height: 1.6em;
+          padding: 0.8em 0;
+          width: 100%; }
+  footer > div:nth-of-type(2) {
+    background: #005789;
+    clear: both;
+    color: #ffffff; }
+    footer > div:nth-of-type(2) div ul {
+      margin: 0;
+      padding: 0 0 1em; }
+      footer > div:nth-of-type(2) div ul li {
+        display: inline-block;
+        margin-right: 0.75rem; }
+        footer > div:nth-of-type(2) div ul li a {
+          color: #ffffff;
+          font-size: 0.75em;
+          line-height: 1.86667em;
+          text-decoration: underline; }
+    footer > div:nth-of-type(2) div p {
+      clear: both;
+      font-size: 0.75em;
+      line-height: 1.86667em;
+      margin: 0;
+      padding: 1.33333em 0 0;
+      text-align: center; }
+      footer > div:nth-of-type(2) div p span {
+        display: block; }
+        footer > div:nth-of-type(2) div p span img {
+          display: inline-block;
+          height: 1em;
+          padding-left: 1em;
+          width: auto; }
+
+@media screen and (min-width: 415px) {
+  .wrap {
+    padding: 0 5.78313%; }
+
+  header .hamburger {
+    left: 5.78313%; }
+  header nav ul {
+    text-align: center; }
+    header nav ul li {
+      border-bottom: 1px solid #0095da;
+      padding-bottom: 1em; }
+      header nav ul li:first-of-type {
+        border: none;
+        padding-bottom: 0; }
+      header nav ul li:last-of-type {
+        border: none;
+        padding-bottom: 0; }
+      header nav ul li ul li {
+        border: none;
+        padding-bottom: 0;
+        padding-left: 0; }
+
+  .page section h1 {
+    font-size: 2.2em;
+    line-height: 1.27273em; }
+  .page section ul {
+    padding: 0 5.78313%; }
+  .page section .gallery div > div p {
+    padding: 0 5.78313%; }
+  .page section .gallery div > div i {
+    padding-right: 5.78313%; }
+  .page section .img-row {
+    margin-right: 5.78313%;
+    padding: 0 5.78313%;
+    width: 29.47791%; }
+    .page section .img-row:last-of-type {
+      margin-right: 0; }
+  .page section table {
+    margin: 1.4em auto; }
+  .page section .drawer-menu ul {
+    padding: 0; }
+    .page section .drawer-menu ul li a {
+      padding-left: 5.78313%; }
+      .page section .drawer-menu ul li a img {
+        right: 5.78313%; }
+
+  footer div:first-of-type ul li {
+    height: 4.2em; }
+    footer div:first-of-type ul li a {
+      padding-top: 1.4em; } }
+@media screen and (min-width: 600px) {
+  .row:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; }
+
+  .col1-2, .page section article .row > div {
+    float: left;
+    width: 47%; }
+
+  .col1-3 {
+    float: left;
+    width: 33.33333%; }
+
+  .col1-5b, .page section .gallery .row .row > div {
+    float: left;
+    margin-bottom: 1.4em;
+    width: 17.6%; }
+
+  .wrap {
+    padding: 0 6%; }
+
+  .page section .desktop-img {
+    display: block; }
+  .page section .mobile-img {
+    display: none; }
+  .page section ul {
+    padding: 0 6%; }
+  .page section article .row > div {
+    margin-right: 6%; }
+    .page section article .row > div:last-of-type {
+      margin-right: 0; }
+    .page section article .row > div p {
+      margin-bottom: 0;
+      padding: 0; }
+    .page section article .row > div .notice {
+      padding: 6%; }
+  .page section .systems h3 {
+    border-top: 0;
+    padding-top: 0; }
+  .page section .gallery {
+    margin-bottom: 0; }
+    .page section .gallery div > div {
+      border-bottom: 0; }
+      .page section .gallery div > div:last-of-type {
+        margin-bottom: 0; }
+    .page section .gallery .row {
+      margin: 0;
+      position: relative; }
+      .page section .gallery .row .row {
+        float: none;
+        width: 100%; }
+        .page section .gallery .row .row > div {
+          margin-right: 3%; }
+          .page section .gallery .row .row > div:last-of-type {
+            margin-right: 0; }
+      .page section .gallery .row nav {
+        display: block;
+        position: absolute;
+        top: 9em;
+        width: 100%; }
+        .page section .gallery .row nav div {
+          cursor: pointer;
+          height: 2em;
+          width: 6%; }
+        .page section .gallery .row nav .gallery-left {
+          background-image: url("../img/chevron-lt.svg");
+          background-repeat: no-repeat;
+          background-position: left center;
+          float: left; }
+        .page section .gallery .row nav .gallery-right {
+          background-image: url("../img/chevron-rt.svg");
+          background-repeat: no-repeat;
+          background-position: right center;
+          float: right; }
+      .page section .gallery .row figure {
+        border-bottom: 1px solid #ededed;
+        display: block;
+        margin: 1.4em 0;
+        padding-bottom: 1.4em;
+        text-align: center; }
+        .page section .gallery .row figure figcaption {
+          font-size: 0.875rem;
+          font-weight: bold;
+          line-height: 1.6em;
+          margin: 0; }
+      .page section .gallery .row .gallery-item {
+        border: none;
+        cursor: pointer;
+        height: auto;
+        padding: 0;
+        min-height: 4.2em;
+        max-height: 100%; }
+        .page section .gallery .row .gallery-item .thb-overlay {
+          display: none; }
+        .page section .gallery .row .gallery-item i {
+          display: none; }
+        .page section .gallery .row .gallery-item p {
+          display: none; }
+        .page section .gallery .row .gallery-item img {
+          padding: 0;
+          position: static;
+          margin: 0; }
+      .page section .gallery .row .main-gallery-image {
+        background-size: contain;
+        border: none;
+        display: block;
+        float: none;
+        height: auto;
+        max-height: 100%;
+        min-height: 18em;
+        margin: 0 auto 1.4em;
+        padding: 0;
+        position: relative;
+        width: 85%; }
+        .page section .gallery .row .main-gallery-image img {
+          display: none; }
+  .page section .img-row {
+    padding: 0 3%; }
+  .page section .drawer-menu ul li a {
+    padding-left: 6%; }
+    .page section .drawer-menu ul li a img {
+      right: 6%; } }
+@media screen and (min-width: 768px) {
+  .col3-12, .page .wrap > .row > div:first-of-type {
+    float: left;
+    width: 22.5%; }
+
+  .col4-12, header a {
+    float: left;
+    width: 31.11111%; }
+
+  .col7-12, header nav {
+    float: right;
+    width: 56.94444%; }
+
+  .col9-12, .page .wrap > .row > div:nth-of-type(2) {
+    float: right;
+    width: 74.16667%; }
+
+  .col1-5, header nav ul li {
+    float: left;
+    width: 17.65854%; }
+
+  html {
+    font-size: 16px; }
+
+  body {
+    font: 300 16px/1.4 "Source Sans Pro", sans-serif; }
+
+  .wrap {
+    padding: 0 3.125%; }
+
+  .desktop-wrap {
+    padding-left: 0; }
+
+  header a {
+    margin: 0 3.125% 0 0;
+    padding: 1.4em 0; }
+    header a h1 {
+      background-position: left center; }
+  header .hamburger {
+    display: none; }
+  header > div:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; }
+  header nav {
+    display: block;
+    position: relative; }
+    header nav ul {
+      font-weight: normal;
+      padding: 2.6em 0 0 0; }
+      header nav ul li {
+        border: none;
+        cursor: pointer;
+        font-size: 0.875em;
+        line-height: 1em;
+        margin: 0 2.92683% 0 0;
+        padding: 0.7em 0;
+        position: relative; }
+        header nav ul li span {
+          display: none; }
+        header nav ul li:nth-of-type(5) {
+          padding-bottom: 0.8em; }
+          header nav ul li:nth-of-type(5) ul {
+            left: auto;
+            right: 0; }
+            header nav ul li:nth-of-type(5) ul li a {
+              text-align: right; }
+        header nav ul li ul {
+          padding: 0.8em 0 0 0;
+          position: absolute;
+          left: 0;
+          top: 33px;
+          width: 15.4em; }
+          header nav ul li ul li {
+            cursor: default;
+            float: none;
+            font-size: 1em;
+            padding: 0;
+            width: 100%; }
+            header nav ul li ul li:hover {
+              background: none;
+              border: none; }
+            header nav ul li ul li:first-of-type {
+              margin-top: 4px; }
+            header nav ul li ul li:last-of-type {
+              padding-bottom: 0; }
+            header nav ul li ul li a {
+              float: none;
+              padding: 0.7em;
+              text-align: left; }
+              header nav ul li ul li a:hover {
+                background-color: rgba(0, 149, 218, 0.8);
+                cursor: pointer; }
+        header nav ul li:hover ul {
+          background-color: rgba(0, 87, 137, 0.8);
+          display: block;
+          z-index: 100; }
+    header nav .mobile-search {
+      display: none; }
+    header nav .top-nav-active {
+      border-bottom: 3px solid #0095da; }
+    header nav .lit-menu {
+      text-align: left;
+      padding-left: 0.8em; }
+      header nav .lit-menu a {
+        padding: 0.8em 0.4em;
+        text-decoration: none; }
+    header nav .search {
+      background: url("../img/search-icon-white.svg") no-repeat 82% 9px;
+      background-size: 16px 16px;
+      height: 34.98px;
+      margin-right: 0;
+      padding: 0; }
+    header nav .desktop-search {
+      display: none;
+      position: absolute;
+      top: 2.07em;
+      width: 100%;
+      z-index: 101; }
+      header nav .desktop-search input {
+        padding-left: 2.75%; }
+      header nav .desktop-search button {
+        background-size: 16px 16px;
+        right: 5px;
+        top: 18px; }
+
+  .page .category-headline {
+    padding-left: 3.125%;
+    text-align: left; }
+  .page .wrap > .row > div:first-of-type {
+    margin-right: 3.125%; }
+  .page .wrap > .row > div:nth-of-type(2) {
+    float: right; }
+  .page .left-nav {
+    display: block;
+    font-size: 0.875em;
+    line-height: 1.6em; }
+    .page .left-nav ul {
+      margin: 0;
+      margin-top: 2.8em;
+      padding: 0; }
+      .page .left-nav ul li {
+        list-style-type: none; }
+        .page .left-nav ul li a {
+          color: #0095da;
+          display: block;
+          padding: 0 15.625% 0.7em; }
+          .page .left-nav ul li a:hover {
+            color: #999999; }
+      .page .left-nav ul .left-nav-active a {
+        color: #0095da;
+        font-weight: bold; }
+  .page section .drawer-menu {
+    display: none; }
+  .page .specs-nav ul li {
+    cursor: pointer; }
+
+  footer {
+    margin-top: 1.4em; }
+    footer > div:first-of-type ul {
+      padding: 0 3.125%; }
+      footer > div:first-of-type ul li {
+        border-bottom: 1px solid #ffffff;
+        border-right: 1px solid #ffffff;
+        font-weight: normal;
+        width: 25%; }
+        footer > div:first-of-type ul li:hover {
+          background: #0095da; }
+          footer > div:first-of-type ul li:hover a {
+            color: #ffffff; }
+        footer > div:first-of-type ul li:first-of-type {
+          border-left: 1px solid #ffffff; }
+    footer > div:nth-of-type(2) {
+      padding: 1.4em 0; }
+      footer > div:nth-of-type(2):after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0; }
+      footer > div:nth-of-type(2) div ul {
+        float: right;
+        padding: 0;
+        padding-right: 3.125%; }
+        footer > div:nth-of-type(2) div ul li {
+          height: auto;
+          list-style-type: none;
+          margin-right: 1.4rem;
+          text-align: left; }
+          footer > div:nth-of-type(2) div ul li:last-of-type {
+            margin-right: 0; }
+          footer > div:nth-of-type(2) div ul li a {
+            font-size: 0.875em;
+            line-height: 1.6em;
+            padding-top: 0; }
+            footer > div:nth-of-type(2) div ul li a:hover {
+              color: #0095da; }
+      footer > div:nth-of-type(2) div p {
+        float: left;
+        font-size: 0.875em;
+        line-height: 1.6em;
+        padding: 0;
+        padding-left: 3.125%; }
+        footer > div:nth-of-type(2) div p span {
+          display: inline-block; }
+          footer > div:nth-of-type(2) div p span img {
+            padding-left: 0.7em; } }
+@media screen and (min-width: 1025px) {
+  body {
+    background: #ffffff; }
+
+  .wrap {
+    margin: auto;
+    max-width: 1024px; }
+
+  .desktop-wrap {
+    background: #ffffff; }
+
+  .desktop-img-wrap {
+    margin: auto;
+    max-width: 1024px; }
+
+  .page .left-nav {
+    font-size: 1em;
+    line-height: 1.4em; }
+    .page .left-nav ul li a {
+      padding: 0 15.625% 0.7em; }
+
+  footer div:first-of-type ul {
+    margin: auto;
+    max-width: 1024px;
+    padding: 0; }
+  footer div:nth-of-type(2) div {
+    margin: auto;
+    max-width: 1024px; }
+    footer div:nth-of-type(2) div ul {
+      padding: 0; }
+    footer div:nth-of-type(2) div p {
+      padding: 0; }
+      footer div:nth-of-type(2) div p span {
+        padding-left: 1em; }
+        footer div:nth-of-type(2) div p span img {
+          padding-left: 1em; } }
+
+/*# sourceMappingURL=style.css.map */

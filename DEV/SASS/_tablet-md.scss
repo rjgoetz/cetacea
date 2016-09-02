@@ -1,0 +1,161 @@
+@media screen and (min-width: 600px) {
+  @import "grid-tablet";
+
+  // tablet globals
+  .wrap {
+    padding: 0 (36/600)*100%;
+  }
+
+  // standard page styling
+  .page {
+    section {
+      .desktop-img {
+        display: block;
+      }
+      .mobile-img {
+        display: none;
+      }
+      ul {
+        padding: 0 (36/600)*100%;
+      }
+      article {
+        .row {
+          &>div {
+            @extend .col1-2;
+            margin-right: (36/600)*100%;
+            &:last-of-type {
+              margin-right: 0;
+            }
+            p {
+              margin-bottom: 0;
+              padding: 0;
+            }
+            .notice {
+              padding: (36/600)*100%;
+            }
+          }
+        }
+      }
+      .systems {
+        h3 {
+          border-top: 0;
+          padding-top: 0;
+        }
+      }
+      .gallery {
+        margin-bottom: 0;
+        div > div {
+          border-bottom: 0;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+        .row {
+          margin: 0;
+          position: relative;
+          .row {
+            float: none;
+            width: 100%;
+            &>div {
+              @extend .col1-5b;
+              margin-right: (18/600)*100%;
+              &:last-of-type {
+                margin-right: 0;
+              }
+            }
+          }
+          nav {
+            display: block;
+            position: absolute;
+            top: 9em;
+            width: 100%;
+            div {
+              cursor: pointer;
+              height: 2em;
+              width: (36/600)*100%;
+            }
+            .gallery-left {
+              background-image: url("../img/chevron-lt.svg");
+              background-repeat: no-repeat;
+              background-position: left center;
+              float: left;
+            }
+            .gallery-right {
+              background-image: url("../img/chevron-rt.svg");
+              background-repeat: no-repeat;
+              background-position: right center;
+              float: right;
+            }
+          }
+          figure {
+            border-bottom: 1px solid $grey;
+            display: block;
+            margin: 1.4em 0;
+            padding-bottom: 1.4em;
+            text-align: center;
+            figcaption {
+              font-size: 0.875rem;
+              font-weight: bold;
+              line-height: (1.4/0.875)*1em;
+              margin: 0;
+            }
+          }
+          .gallery-item {
+            border: none;
+            cursor: pointer;
+            height: auto;
+            padding: 0;
+            min-height: 4.2em;
+            max-height: 100%;
+            .thb-overlay {
+              display: none;
+            }
+            i {
+              display: none;
+            }
+            p {
+              display: none;
+            }
+            img {
+              padding: 0;
+              position: static;
+              margin: 0;
+            }
+          }
+          .main-gallery-image {
+            background-size: contain;
+            border: none;
+            display: block;
+            float: none;
+            height: auto;
+            max-height: 100%;
+            min-height: 18em;
+            margin: 0 auto 1.4em;
+            padding: 0;
+            position: relative;
+            width: 85%;
+            img {
+              display: none;
+            }
+          }
+        }
+      }
+      .img-row {
+        padding: 0 (18/600)*100%;
+      }
+      .drawer-menu {
+        ul {
+          li {
+            a {
+              padding-left: (36/600)*100%;
+              img {
+                right: (36/600)*100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

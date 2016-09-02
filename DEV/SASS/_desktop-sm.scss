@@ -1,0 +1,294 @@
+@media screen and (min-width: 768px) {
+  @import "grid-desktop";
+
+  // desktop globals
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    font: 300 16px/1.4 "Source Sans Pro", sans-serif;
+  }
+
+  .wrap {
+    padding: 0 (24/768)*100%;
+  }
+
+  .desktop-wrap {
+    padding-left: 0;
+  }
+  // end desktop globals
+
+
+  // begin page header
+  header {
+    a {
+      @extend .col4-12;
+      margin: 0 (24/768)*100% 0 0;
+      padding: 1.4em 0;
+      h1 {
+        background-position: left center;
+      }
+    }
+    .hamburger {
+      display: none;
+    }
+    & > div {
+      &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+      }
+    }
+    nav {
+      @extend .col7-12;
+      display: block;
+      position: relative;
+      ul {
+        font-weight: normal;
+        padding: 2.6em 0 0 0;
+        li {
+          @extend .col1-5;
+          border: none;
+          cursor: pointer;
+          font-size: 0.875em;
+          line-height: 1em;
+          margin: 0 (12/410)*100% 0 0;
+          padding: 0.7em 0;
+          position: relative;
+          span {
+            display: none;
+          }
+          &:nth-of-type(5) {
+            padding-bottom: 0.8em;
+            ul {
+              left: auto;
+              right: 0;
+              li {
+                a {
+                  text-align: right;
+                }
+              }
+            }
+          }
+          ul {
+            padding: 0.8em 0 0 0;
+            position: absolute;
+            left: 0;
+            top: 33px;
+            width: 15.4em;
+            li {
+              cursor: default;
+              float: none;
+              font-size: 1em;
+              padding: 0;
+              width: 100%;
+              &:hover {
+                background: none;
+                border: none;
+              }
+              &:first-of-type {
+                margin-top: 4px;
+              }
+              &:last-of-type {
+                padding-bottom: 0;
+              }
+              a {
+                float: none;
+                padding: 0.7em;
+                text-align: left;
+                &:hover {
+                  background-color: rgba($lt-blue, 0.8);
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+          &:hover {
+            ul {
+              background-color: rgba($blue, 0.8);
+              display: block;
+              z-index: 100;
+            }
+          }
+        }
+      }
+      .mobile-search {
+        display: none;
+      }
+      .top-nav-active {
+        border-bottom: 3px solid $lt-blue;
+      }
+      .lit-menu {
+        text-align: left;
+        padding-left: 0.8em;
+        a {
+          padding: 0.8em 0.4em;
+          text-decoration: none;
+        }
+      }
+      .search {
+        background: url("../img/search-icon-white.svg") no-repeat 82% 9px;
+        background-size: 16px 16px;
+        height: 34.98px;
+        margin-right: 0;
+        padding: 0;
+      }
+      .desktop-search {
+        display: none;
+        position: absolute;
+        top: 2.07em;
+        width: 100%;
+        z-index: 101;
+        input {
+          padding-left: 2.75%;
+        }
+        button {
+          background-size: 16px 16px;
+          right: 5px;
+          top: 18px;
+        }
+      }
+    }
+  }
+  //end page header
+
+  // begin standard page styling
+  .page {
+    .category-headline {
+      padding-left: (24/768)*100%;
+      text-align: left;
+    }
+    .wrap {
+      &>.row {
+        &>div:first-of-type {
+          @extend .col3-12;
+          margin-right: (24/768)*100%;
+        }
+        &>div:nth-of-type(2) {
+          @extend .col9-12;
+          float: right;
+        }
+      }
+    }
+    .left-nav {
+      display: block;
+      font-size: 0.875em;
+      line-height: 1.6em;
+      ul {
+        margin: 0;
+        margin-top: 2.8em;
+        padding: 0;
+        li {
+          list-style-type: none;
+          a {
+            color: $lt-blue;
+            display: block;
+            padding: 0 (24/(768/5))*100% 0.7em;
+
+            &:hover {
+              color: $dk-grey;
+            }
+          }
+        }
+        .left-nav-active {
+          a {
+            color: $lt-blue;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    section {      
+      .drawer-menu {
+        display: none;
+      }
+    }
+    .specs-nav {
+      ul {
+        li {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  // end standard page styling
+
+  // begin footer
+
+  footer {
+    margin-top: 1.4em;
+    &>div:first-of-type {
+      ul {
+        padding: 0 (24/768)*100%;
+        li {
+          border-bottom: 1px solid $white;
+          border-right: 1px solid $white;
+          font-weight: normal;
+          width: 25%;
+          &:hover {
+            background: $lt-blue;
+            a {
+              color: $white;
+            }
+          }
+          &:first-of-type {
+            border-left: 1px solid $white;
+          }
+        }
+      }
+    }
+    &>div:nth-of-type(2) {
+      padding: 1.4em 0;
+      &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+      }
+      div {
+        ul {
+          float: right;
+          padding: 0;
+          padding-right: (24/768)*100%;
+          li {
+            height: auto;
+            list-style-type: none;
+            margin-right: 1.4rem;
+            text-align: left;
+            &:last-of-type {
+              margin-right: 0;
+            }
+            a {
+              font-size: 0.875em;
+              line-height: 1.6em;
+              padding-top: 0;
+              &:hover {
+                color: $lt-blue;
+              }
+            }
+          }
+        }
+        p {
+          float: left;
+          font-size: 0.875em;
+          line-height: 1.6em;
+          padding: 0;
+          padding-left: (24/768)*100%;
+          span {
+            display: inline-block;
+            img {
+              padding-left: 0.7em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

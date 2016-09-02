@@ -1,0 +1,24 @@
+.col3-12 {
+  float: left;
+  width: (162/720)*100%; // 3 columns @ 38px ea. + 2 margins @ 24px ea.
+}
+
+.col4-12 {
+  float: left;
+  width: (224/720)*100%; // 4 columns @ 38px ea. + 3 margins @ 24px ea.
+}
+
+.col7-12 {
+  float: right;
+  width: (410/720)*100%; // 7 columns @ 38px ea. + 6 margins @ 24px ea.
+}
+
+.col9-12 {
+  float: right;
+  width: (534/720)*100%; // 9 columns @ 38px ea. + 8 margins @ 24px ea.
+}
+
+.col1-5 {
+  float: left;
+  width: (72.4/410)*100%; // 5 columns @62.8px ea. + 4 margins @ 24px ea.
+}

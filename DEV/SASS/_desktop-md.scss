@@ -1,0 +1,67 @@
+@media screen and (min-width: 1025px) {
+
+  // desktop globals
+  body {
+    background: $white;
+  }
+
+  .wrap {
+    margin: auto;
+    max-width: 1024px;
+  }
+
+  .desktop-wrap {
+    background: $white;
+  }
+
+  .desktop-img-wrap {
+    margin: auto;
+    max-width: 1024px;
+  }
+
+  // begin page styling
+
+  .page {
+    .left-nav {
+      font-size: 1em;
+      line-height: 1.4em;
+      ul {
+        li {
+          a {
+            padding: 0 (24/(768/5))*100% 0.7em;
+          }
+        }
+      }
+    }
+  }
+
+  // begin footer
+  footer {
+    div:first-of-type {
+      ul {
+        margin: auto;
+        max-width: 1024px;
+        padding: 0;
+      }
+    }
+    div:nth-of-type(2) {
+      div {
+        margin: auto;
+        max-width: 1024px;
+        ul {
+          padding: 0;
+        }
+        p {
+          padding: 0;
+          span {
+            padding-left: 1em;
+            img {
+              padding-left: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
