@@ -1,3 +1,5 @@
+<?php include '../../includes/siteroot.php'; ?>
+
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
@@ -11,8 +13,8 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:600,300|Rosario' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="../../css/style.css" type="text/css">
-        <script src="../../js/vendor/modernizr-2.8.3.min.js"></script>
+        <link rel="stylesheet" href="<?php echo $siteroot; ?>/css/style.css" type="text/css">
+        <script src="<?php echo $siteroot; ?>/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -21,16 +23,13 @@
 
         <!--page header-->
         <?php include '../../includes/page-header.php'; ?>
-        <script>
-          var topNav = 'products';
-        </script>
         <!--end page header-->
 
         <!--main section-->
         <main class="page">
           <section>
             <div class="desktop-img-wrap">
-              <img class="desktop-img" src="../../img/astronaut-speaker-system-banner.jpg" alt="">
+              <img class="desktop-img" src="../../img/orbiter-pendant-microphone-banner.jpg" alt="Orbiter pendant microphone banner">
               <h1 class="category-headline">Orbiter &dash; Pendant Microphone</h1>
             </div>
 
@@ -39,22 +38,14 @@
               <div class="row">
                 <!-- start column -->
                 <div>
-                  <aside class="left-nav">
-                    <nav>
-                      <ul>
-                        <li><a href="../../index.php">Overview</a></li>
-                        <li class="left-nav-active"><a href="index.php">Ergonomics</a></li>
-                        <li><a href="../../installation/">Installation</a></li>
-                        <li><a href="../../system-bundles/">System Bundles</a></li>
-                        <li><a href="../../specs/">Tech Specs</a></li>
-                      </ul>
-                    </nav>
-                  </aside>
+                  <!-- start left nav -->
+                  <?php include '../../includes/orbiter-left-nav.php'; ?>
+                  <!-- end left nav -->
                 </div>
                 <!-- end column -->
                 <!-- start column -->
                 <div>
-                  <h1>Ergonomics</span></h1>
+                  <h1>Ergonomics</h1>
 
                   <p>
                     The Orbiter's simple, ergonomic design is based on valuable feedback from teacher focus groups, all of which voiced a common frustration with current overly&dash;complicated and uncomfortable microphone designs. Engineered from the ground up for comfortable all&dash;day teaching, the Orbiter's lightweight design, lifetime non&dash;replaceable battery, and simple ease&dash;of&dash;use, allow you to forget it is even there.
@@ -73,7 +64,7 @@
                         </p>
                       </div>
                       <div>
-                        <img class="img-padding3" src="../../img/orbiter-master-control.jpg" alt="">
+                        <img class="img-padding3" src="../../img/orbiter-master-control.jpg" alt="Orbiter microphone back view">
                       </div>
                     </div>
                     <div class="row">
@@ -84,7 +75,7 @@
                         </p>
                       </div>
                       <div>
-                        <img class="img-padding3" src="../../img/orbiter-volume.jpg" alt="">
+                        <img class="img-padding3" src="../../img/orbiter-volume.jpg" alt="Orbiter microphone volume side view">
                       </div>
                     </div>
                   </article>
@@ -98,7 +89,7 @@
                         </p>
                       </div>
                       <div>
-                        <img class="img-padding3" src="../../img/doeskin-pads.jpg" alt="">
+                        <img class="img-padding3" src="../../img/doeskin-pads.jpg" alt="Orbiter microphone back view doeskin pads">
                       </div>
                     </div>
                   </article>
@@ -112,7 +103,7 @@
                         </p>
                       </div>
                       <div>
-                        <img src="../../img/orbiter-charger.svg" alt="">
+                        <img src="../../img/orbiter-charger.svg" alt="Orbiter pendant microphone charging diagram">
                       </div>
                     </div>
                   </article>
@@ -124,20 +115,7 @@
             <!-- end page wrap -->
 
             <!--sub menu-->
-            <nav class="drawer-menu">
-              <div>
-                <div class="sub-menu-btn">
-                  <img src="../../img/chevron-up.svg" alt="">
-                </div>
-              </div>
-              <ul>
-                <li><a href="../index.php">Overview<img src="../../img/chevron-rt-wht.svg" alt=""></a></li>
-                <li><a class="active" href="index.php">Ergonomics<img src="../../img/chevron-rt-wht.svg" alt=""></a></li>
-                <li><a href="../installation/">Installation<img src="../../img/chevron-rt-wht.svg" alt=""></a></li>
-                <li><a href="../system-bundles/">System Bundles<img src="../../img/chevron-rt-wht.svg" alt=""></a></li>
-                <li><a href="../specs/">Tech Specs<img src="../../img/chevron-rt-wht.svg" alt=""></a></li>
-              </ul>
-            </nav>
+            <?php include '../../includes/orbiter-sub-nav.php'; ?>
             <!--end sub menu-->
           </section>
         </main>
@@ -148,17 +126,6 @@
         <!--end footer section-->
 
         <!-- j/s -->
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="../../js/plugins.js"></script>
-        <script src="../../js/main.js"></script>
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
+        <?php include '../../includes/scripts.php'; ?>
     </body>
 </html>

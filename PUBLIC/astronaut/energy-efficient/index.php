@@ -1,18 +1,20 @@
+<?php include '../../includes/siteroot.php'; ?>
+
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Energy-efficient design | Cetacea Sound</title>
-        <meta name="description" content="">
+        <title>Energy-efficient design - Astronaut | Cetacea Sound</title>
+        <meta name="description" content="The Astronaut's patented acoustic design uses 75% less power to achieve the same loudness as in-ceiling speakers.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
         <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:600,300|Rosario' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="../../css/style.css" type="text/css">
-        <script src="../../js/vendor/modernizr-2.8.3.min.js"></script>
+        <link rel="stylesheet" href="<?php echo $siteroot; ?>/css/style.css" type="text/css">
+        <script src="<?php echo $siteroot; ?>/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -21,16 +23,13 @@
 
         <!--page header-->
         <?php include '../../includes/page-header.php'; ?>
-        <script>
-          var topNav = 'products';
-        </script>
         <!--end page header-->
 
         <!--main section-->
         <main class="page">
           <section>
             <div class="desktop-img-wrap">
-              <img class="desktop-img" src="../../img/astronaut-speaker-system-banner.jpg" alt="">
+              <img class="desktop-img" src="../../img/astronaut-speaker-system-banner.jpg" alt="Astronaut ceiling speaker banner">
               <h1 class="category-headline">Astronaut &dash; Ceiling Speaker</h1>
             </div>
 
@@ -39,20 +38,9 @@
               <div class="row">
                 <!-- start column -->
                 <div>
-                  <aside class="left-nav">
-                    <nav>
-                      <ul>
-                        <li><a href="../index.php">Overview</a></li>
-                        <li><a href="../cl/">Astronaut CL</a></li>
-                        <li><a href="../xl/">Astronaut XL</a></li>
-                        <li><a href="../orbiter-systems/">System Bundles</a></li>
-                        <li><a href="../word-recognition/">Word Recognition</a></li>
-                        <li class="left-nav-active"><a href="../energy-efficient/">Energy-Efficient</a></li>
-                        <li><a href="../installation/">Installation</a></li>
-                        <li><a href="../specs/">Tech Specs</a></li>
-                      </ul>
-                    </nav>
-                  </aside>
+                  <!-- start left nav -->
+                  <?php include '../../includes/astronaut-left-nav.php'; ?>
+                  <!-- end left nav -->
                 </div>
                 <!-- end column -->
                 <!-- start column -->
@@ -70,7 +58,6 @@
                         <img class="img-margin-top" src="../../img/energy-efficient-green-design.jpg" alt="energy efficient design">
                       </div>
                     </div>
-
                   </article>
 
                   <article>
@@ -80,8 +67,9 @@
                         <p>Cetacea Sound is proud to offer the first certified, green audio system to the market. Look for the Lite Energy&trade; logo on our product literature and power supplies as a sign of our commitment to the environment and energy conservation.</p>
                       </div>
                       <div>
-                        <img class="img-padding2 img-margin-top" src="../../img/lite-energy-logo.svg" alt="">
+                        <img class="img-padding2 img-padding4 img-margin-top" src="../../img/lite-energy-logo.svg" alt="Cetacea Lite Energy Logo">
                       </div>
+                    </div>
                   </article>
 
                   <article>
@@ -91,10 +79,9 @@
                         <p>Our power supplies meet the most stringent international and domestic energy conservation certifications, including ENERGY STAR&reg; and California Energy Conservation "Circle V".</p>
                       </div>
                       <div>
-                        <img class="img-padding2 img-margin-top" src="../../img/energy-star-logo.svg" alt="">
-                        <img class="img-padding2 img-margin-top" src="../../img/circle-5-logo.svg" alt="">
+                        <img class="img-padding2 img-padding4 img-margin-top" src="../../img/energy-star-logo.svg" alt="Energy Star Logo">
+                        <img class="img-padding2 img-padding4 img-margin-top" src="../../img/circle-5-logo.svg" alt="CEC Circle V Logo">
                       </div>
-
                     </div>
                   </article>
                 </div>
@@ -105,23 +92,8 @@
             <!-- end page wrap -->
 
             <!--sub menu-->
-            <nav class="drawer-menu">
-              <div>
-                <div class="sub-menu-btn"><img src="../../img/chevron-up.svg" alt="up chevron"></div>
-              </div>
-              <ul>
-                <li><a href="../">Overview<img src="../../img/chevron-rt-wht.svg" alt="right chevron"></a></li>
-                <li><a href="../cl/">Astronaut CL<img src="../../img/chevron-rt-wht.svg" alt="right chevron"></a></li>
-                <li><a href="../xl/">Astronaut XL<img src="../../img/chevron-rt-wht.svg" alt="right chevron"></a></li>
-                <li><a href="../orbiter-systems/">System Bundles<img src="../../img/chevron-rt-wht.svg" alt="right chevron"></a></li>
-                <li><a href="../word-recognition/">Word Recognition<img src="../../img/chevron-rt-wht.svg" alt="right chevron"></a></li>
-                <li><a class="active" href="index.php">Energy-Efficient<img src="../../img/chevron-rt-wht.svg" alt="right chevron"></a></li>
-                <li><a href="../installation/">Installation<img src="../../img/chevron-rt-wht.svg" alt="right chevron"></a></li>
-                <li><a href="../specs/">Tech Specs<img src="../../img/chevron-rt-wht.svg" alt="right chevron"></a></li>
-              </ul>
-            </nav>
+            <?php include '../../includes/astronaut-sub-nav.php'; ?>
             <!--end sub menu-->
-
           </section>
         </main>
         <!--end main section-->
@@ -130,20 +102,7 @@
         <?php include '../../includes/page-footer.php'; ?>
         <!--end footer section-->
 
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="../../slick/slick.min.js"></script>
-        <script src="../../js/plugins.js"></script>
-        <script src="../../js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
+        <!-- js -->
+        <?php include '../../includes/scripts.php'; ?>
     </body>
 </html>

@@ -1,5 +1,28 @@
 $(document).ready(function() {
 
+  var siteroot = "/cetacea2016/PUBLIC";
+  // var siteroot = "";
+
+  // // // // // // // // // // // //
+  // // Slick JS // // // // // // //
+  // // // // // // // // // // // //
+
+  // slider settings
+  $(".single-item").slick({
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 7500
+  });
+
+  var showSlider = function() {
+    $(".slider").css("visibility", "visible");
+  }
+
   // // // // // // // // // // // //
   // // mobile menu interaction // //
   // // // // // // // // // // // //
@@ -8,14 +31,12 @@ $(document).ready(function() {
 
   function mainNav() {
     if (menuStatus === false) {
-      $(".hamburger img").attr("src", "/cetacea2016/PUBLIC/img/close-icon.svg");
-      // $(".hamburger img").attr("src", "/img/close-icon.svg");
+      $(".hamburger img").attr("src", siteroot + "/img/close-icon.svg");
       $(".drawer-menu").css("position", "relative");
       $(window).scrollTop(0);
       menuStatus = true;
     } else {
-      $(".hamburger img").attr("src", "/cetacea2016/PUBLIC/img/hamburger-icon.svg");
-      // $(".hamburger img").attr("src", "/img/hamburger-icon.svg");
+      $(".hamburger img").attr("src", siteroot + "/img/hamburger-icon.svg");
       menuStatus = false;
     }
   }
@@ -30,36 +51,6 @@ $(document).ready(function() {
     $(".desktop-search").css("display", "block");
   })
 
-  // // // // // // // // // // // // //
-  // // top nav active links // // // //
-  // // // // // // // // // // // // //
-
-  function scanTopNavData() {
-    var topNavElm = $("header nav ul li");
-
-    for (var i = 0; i < topNavElm.length; i++) {
-      var topNavElmData = $(topNavElm[i]).attr("data");
-
-      if (topNavElmData == topNav) {
-        $(topNavElm[i]).attr("class", "top-nav-active");
-      }
-    }
-  }
-
-  switch (topNav) {
-    case 'products':
-      scanTopNavData();
-      break;
-    case 'support':
-      scanTopNavData();
-      break;
-    case 'company':
-      scanTopNavData();
-      break;
-    case 'dealers':
-      scanTopNavData();
-      break;
-  }
 
   // // // // // // // // // // //
   // // scroll interactions // //
@@ -110,7 +101,7 @@ $(document).ready(function() {
   // loop through and match styling to clicked nav item
   $(".specs-nav li").click(function() {
     specsNavClass = $(this).attr("class");
-    specsDataNum = $(this).attr("data");
+    specsDataNum = $(this).attr("data-number");
     for(var i = 0; i < specsArticle.length; i++) {
       if (i == specsDataNum) {
         $(".specs-nav li").eq(specsDataNum).attr("class", "");
@@ -179,7 +170,7 @@ $(document).ready(function() {
         "background" : "url(" + imgSrc + ") no-repeat center top",
         "background-size" : "contain"
       });
-      $(".main-gallery-image").attr("data", galleryPos);
+      $(".main-gallery-image").attr("data-number", galleryPos);
       $(".gallery").find("figcaption").text(captionText);
     };
 
@@ -193,7 +184,7 @@ $(document).ready(function() {
       }
     } else {
       imgSrc = $(this).find("img").attr("src");
-      galleryPos = $(this).attr("data");
+      galleryPos = $(this).attr("data-number");
       captionText = $(this).find("p").text();
       insertImg();
     }
@@ -216,7 +207,7 @@ $(document).ready(function() {
 
     if (gallery) {
       insertImg();
-      $(".main-gallery-image").attr("data", "0");
+      $(".main-gallery-image").attr("data-number", "0");
     }
   }
 
@@ -224,7 +215,7 @@ $(document).ready(function() {
   $(".gallery nav div").click(function() {
     var
       galleryItems = $(".gallery-item"),
-      mainImgData = $(".main-gallery-image").attr("data"),
+      mainImgData = $(".main-gallery-image").attr("data-number"),
       imgSrc,
       captionText
     ;
@@ -247,14 +238,14 @@ $(document).ready(function() {
 
         imgSrc = $(galleryItems[0]).find("img").attr("src");
         insertImg();
-        $(".main-gallery-image").attr("data", "0");
+        $(".main-gallery-image").attr("data-number", "0");
 
         setCaptionText(0);
       } else {
         // increment gallery image
 
         mainImgData++
-        $(".main-gallery-image").attr("data", mainImgData);
+        $(".main-gallery-image").attr("data-number", mainImgData);
 
         for (var i = 0; i < galleryItems.length; i++) {
           if (i === mainImgData) {
@@ -270,13 +261,13 @@ $(document).ready(function() {
 
         imgSrc = $(galleryItems[galleryItems.length-1]).find("img").attr("src");
         insertImg();
-        $(".main-gallery-image").attr("data", (galleryItems.length-1));
+        $(".main-gallery-image").attr("data-number", (galleryItems.length-1));
         setCaptionText(galleryItems.length-1);
       } else {
         // decrement gallery image
 
         mainImgData--
-        $(".main-gallery-image").attr("data", mainImgData);
+        $(".main-gallery-image").attr("data-number", mainImgData);
 
         for (var i = 0; i < galleryItems.length; i++) {
           if (i === mainImgData) {
@@ -389,10 +380,22 @@ $(document).ready(function() {
 
       createImgFolderOutput();
     }
-
   }
 
+  // // // // // // // // // // // // // // // // //
+  // // // // // HTML5 Video Player // // // // //
+  // // // // // // // // // // // // // // // // //
+
+  var showVideo = function() {
+    $("#astronaut-video").css("visibility", "visible");
+  }
+
+
+  // call initial functions //
   injectImgFolder();
+  showSlider();
+  subMenuStick();
+  showVideo();
 
   // // // // // // // // // //
   // window resize functions //

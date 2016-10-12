@@ -359,7 +359,7 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
-.clearfix:after, .page section .specs-nav:after, footer > div:first-of-type:after, footer > div:first-of-type ul:after {
+.clearfix:after, .page .video .row:after, .page .home-promos .row:after, .page section .specs-nav:after, footer > div:first-of-type:after, footer > div:first-of-type ul:after {
   visibility: hidden;
   display: block;
   font-size: 0;
@@ -367,7 +367,7 @@ html {
   clear: both;
   height: 0; }
 
-.visuallyhidden, header a h1 span, .home .slider div p, .home .slider div ul, .home section article h2, .home section p, .home .promos, .page .video h2 {
+.visuallyhidden, header a h1 span {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -409,7 +409,7 @@ h2 {
   font-size: 1.125em;
   font-weight: normal;
   line-height: 1.24444em;
-  margin: 1.4rem 0;
+  margin: 1.4em 0;
   text-align: left; }
 
 h3 {
@@ -439,8 +439,17 @@ img {
 section {
   position: relative; }
 
+.anchor-nav {
+  padding: 0 1.4em; }
+
 header {
   background: #005789;
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #005789 0%, #0076b2 33%, #0076b2 50%, #0076b2 66%, #005789 100%);
+  background: -o-linear-gradient(left, #005789 0%, #0076b2 33%, #0076b2 50%, #0076b2 66%, #005789 100%);
+  background: linear-gradient(to right, #005789 0%, #0076b2 33%, #0076b2 50%, #0076b2 66%, #005789 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   border-top: 3px solid #0095da;
   width: 100%; }
   header a {
@@ -463,7 +472,6 @@ header {
     header .hamburger img {
       width: 100%; }
   header nav {
-    background: #005789;
     display: none; }
     header nav form {
       color: #111111;
@@ -531,69 +539,6 @@ header {
     header nav .desktop-search {
       display: none; }
 
-.home {
-  text-align: center; }
-  .home .slider {
-    min-height: 430px; }
-    .home .slider div {
-      background: #ffffff; }
-      .home .slider div h2 {
-        color: #111111;
-        font-family: "Rosario";
-        font-size: 1.875rem;
-        line-height: 0.8em;
-        margin: 3rem 1.5rem 0.75rem 1.5rem; }
-        .home .slider div h2 span {
-          color: #111111;
-          display: block;
-          font-family: "Source Sans Pro", sans-serif;
-          font-size: 1rem;
-          font-weight: 300;
-          line-height: 1.5em;
-          margin-top: 0.75em;
-          padding-bottom: 0.75em; }
-      .home .slider div img {
-        width: 100%; }
-    .home .slider .slick-dots {
-      background: #ffffff;
-      bottom: 0;
-      line-height: 20px; }
-  .home section h1 {
-    color: #005789;
-    font-family: "Rosario";
-    font-size: 1.125em;
-    line-height: 1.3333em;
-    margin: 0 0.625em;
-    padding-top: 1.5rem; }
-  .home section article {
-    margin: 3em 0 3em; }
-    .home section article:last-of-type {
-      margin-bottom: 0; }
-    .home section article > a {
-      display: block; }
-      .home section article > a img {
-        width: 100%; }
-  .home section ol {
-    padding: 0; }
-    .home section ol li {
-      font-size: 0.875em;
-      line-height: 1.71428571428571em;
-      list-style: none;
-      padding: 0 0.75rem 0 3rem;
-      position: relative;
-      margin-bottom: 0.75rem;
-      text-align: left; }
-      .home section ol li span {
-        background: #005789;
-        border-radius: 50%;
-        color: #ffffff;
-        display: inline-block;
-        height: 1.5rem;
-        left: 0.75rem;
-        position: absolute;
-        text-align: center;
-        width: 1.5rem; }
-
 .page .category-headline {
   background: #b2b2b2;
   border-top: 1px solid #ffffff;
@@ -611,10 +556,9 @@ header {
   display: none; }
 .page .diagram {
   border: 1px solid #ededed;
-  margin-bottom: 1.4em;
-  padding: 1.4em; }
-  .page .diagram p {
-    font-weight: bold;
+  margin-bottom: 1.4em; }
+  .page .diagram h3 {
+    margin: 0.7em 0;
     text-align: center; }
 .page .left-nav {
   display: none; }
@@ -630,6 +574,8 @@ header {
   margin-bottom: 1.4em; }
 .page .img-margin-top {
   margin-top: 1.4em; }
+.page .list-item-margin {
+  margin-bottom: 1.4em; }
 .page .img-row {
   display: block;
   float: left;
@@ -638,15 +584,75 @@ header {
   width: 29.58333%; }
   .page .img-row:last-of-type {
     margin-right: 0; }
-.page .video {
-  position: relative; }
-  .page .video img {
-    display: block; }
-  .page .video iframe {
+.page .pdf-icon {
+  display: inline-block;
+  height: 1.15em;
+  margin-right: 0.25em;
+  width: 1.15em; }
+.page .slider {
+  visibility: hidden; }
+  .page .slider .slider-tablet {
+    display: none; }
+  .page .slider .slick-dots {
+    bottom: 0;
+    padding: 0.1875em; }
+  .page .slider .home-banner div h1 {
+    margin: 1.4rem 0; }
+    .page .slider .home-banner div h1 span {
+      font-size: 0.5333em; }
+  .page .slider .home-banner div a {
+    border: 1px solid #999999;
+    border-radius: 2px;
+    color: #999999;
     display: block;
-    position: absolute;
-    top: 0;
-    z-index: -99; }
+    font-size: 0.875em;
+    margin: 0 auto 1.4em;
+    padding: 0.25em 0;
+    text-align: center;
+    width: 7.5em; }
+.page .why-cetacea {
+  border-top: none;
+  padding-top: 1.4em; }
+  .page .why-cetacea h2, .page .why-cetacea h3, .page .why-cetacea p {
+    text-align: center; }
+  .page .why-cetacea h3 {
+    background: #ededed;
+    border-radius: 50%;
+    color: #999999;
+    margin: 0 auto 0.35em;
+    width: 1.4em; }
+.page #astronaut-video {
+  visibility: hidden; }
+.page .video .vjs-poster {
+  background-color: #ffffff; }
+.page .video .row {
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 0; }
+  .page .video .row h2 {
+    color: #0095da;
+    font-family: "Source Sans Pro";
+    padding-top: 0.375em;
+    text-align: center; }
+    @media screen and (min-width: 375px) {
+      .page .video .row h2 {
+        padding-top: 0.8em; } }
+    @media screen and (min-width: 414px) {
+      .page .video .row h2 {
+        padding-top: 1.15em; } }
+  .page .video .row > div {
+    float: left;
+    width: 50%; }
+.page .home-promos .row {
+  margin-bottom: 0; }
+  .page .home-promos .row div {
+    border-right: 1px solid #ededed;
+    float: left;
+    width: 33.3333%; }
+    .page .home-promos .row div:last-of-type {
+      border-right: none; }
+  .page .home-promos .row figure {
+    display: none; }
 .page .systems h3 {
   border-top: 1px solid #ededed;
   font-weight: bold;
@@ -662,22 +668,27 @@ header {
 .page .systems .row div:first-of-type h3 {
   border: none;
   padding-top: 0; }
+.page .systems p {
+  margin: 1.4em 0; }
+.page .documents h3 {
+  margin-bottom: 0.7em; }
 .page .documents ul {
   padding: 0; }
   .page .documents ul li {
     list-style-type: none; }
+.page .product-features ul:first-of-type {
+  margin-bottom: 0; }
 .page section > img {
   display: block; }
 .page section .row .row {
   height: auto; }
   .page section .row .row .gallery-item:last-of-type {
     margin-bottom: 0; }
+.page section .row2 {
+  margin: 0; }
 .page section blockquote {
   font-style: italic;
   margin: 0 0 1.4em; }
-  .page section blockquote figcaption {
-    line-height: 1.4em;
-    margin: 1.4em 0; }
 .page section article {
   border-top: 1px solid #ededed;
   margin-bottom: 1.4em; }
@@ -701,22 +712,61 @@ header {
     .page section article ul li span {
       display: block;
       font-weight: 600; }
-  .page section article .list-item-margin {
-    margin-bottom: 1.4em; }
+  .page section article .dealer-form {
+    margin-bottom: 2.8em; }
+    .page section article .dealer-form label {
+      font-weight: bold; }
+    .page section article .dealer-form input, .page section article .dealer-form select {
+      border: 1px solid #ededed;
+      border-radius: 2px;
+      padding: 0.3em; }
+    .page section article .dealer-form button {
+      background-color: #0095da;
+      border: 1px solid #ededed;
+      color: #ffffff;
+      padding: 0.3em 0.6em; }
+      .page section article .dealer-form button:hover, .page section article .dealer-form button:active {
+        background-color: #005789; }
+    .page section article .dealer-form .form-group {
+      margin-bottom: 1.4em; }
+    .page section article .dealer-form .form-control {
+      display: block;
+      margin: 0.375em 0;
+      width: 100%; }
+    .page section article .dealer-form .extension {
+      width: 25%; }
+    .page section article .dealer-form .checkbox input {
+      margin-right: 0.5em; }
+    .page section article .dealer-form .checkbox label {
+      font-weight: normal; }
+  .page section article .support-list li {
+    margin-bottom: 0.7em; }
   .page section article ol {
-    font-size: 0.875em;
-    line-height: 1.6em;
     margin: 1.4rem;
     padding: 0;
     text-align: left; }
     .page section article ol li {
       list-style-type: decimal; }
+  .page section article figure {
+    margin: 0; }
   .page section article figcaption {
+    font-size: 0.75em;
     line-height: 1.4em;
-    margin: 1.4em 0; }
+    margin: 1em 0 0;
+    padding: 0 1em; }
+    .page section article figcaption span {
+      display: block;
+      text-transform: uppercase; }
   .page section article img {
+    display: block; }
+.page section .error-404 h2, .page section .error-404 p {
+  text-align: center; }
+.page section .error-404 p {
+  font-weight: bold; }
+  .page section .error-404 p a {
     display: block;
-    margin-bottom: 1.4em; }
+    font-weight: normal;
+    margin: 1.4em 0; }
 .page section .specs-imgOff {
   display: none; }
 .page section .specs-nav ul {
@@ -753,28 +803,30 @@ header {
   display: block;
   margin: 1.5em auto;
   width: 93.75%; }
-.page section .applications ul {
+.page section .applications .row div ul {
   padding: 0; }
-  .page section .applications ul .row div li {
+  .page section .applications .row div ul li {
     list-style-type: none;
     padding-left: 25%; }
-    .page section .applications ul .row div li img {
+    .page section .applications .row div ul li img {
       width: 10%; }
-    .page section .applications ul .row div li span {
+    .page section .applications .row div ul li span {
       display: block;
       font-weight: bold; }
-  .page section .applications ul .row:first-of-type div:first-of-type li {
-    background: url("../img/projector-icon.svg") no-repeat left top;
-    background-size: 20%; }
-  .page section .applications ul .row:first-of-type div:nth-of-type(2) li {
-    background: url("../img/voice-icon.svg") no-repeat left top;
-    background-size: 20%; }
-  .page section .applications ul .row:nth-of-type(2) div:first-of-type li {
-    background: url("../img/multimedia-icon.svg") no-repeat left top;
-    background-size: 20%; }
-  .page section .applications ul .row:nth-of-type(2) div:nth-of-type(2) li {
-    background: url("../img/360-icon.svg") no-repeat left top;
-    background-size: 20%; }
+.page section .applications .row div:first-of-type li:first-of-type {
+  background: url("../img/projector-icon.svg") no-repeat left top;
+  background-size: 20%;
+  margin-bottom: 1.4em; }
+.page section .applications .row div:first-of-type li:nth-of-type(2) {
+  background: url("../img/voice-icon.svg") no-repeat left top;
+  background-size: 20%; }
+.page section .applications .row div:nth-of-type(2) li:first-of-type {
+  background: url("../img/multimedia-icon.svg") no-repeat left top;
+  background-size: 20%;
+  margin-bottom: 1.4em; }
+.page section .applications .row div:nth-of-type(2) li:nth-of-type(2) {
+  background: url("../img/360-icon.svg") no-repeat left top;
+  background-size: 20%; }
 .page section .gallery div > div {
   border-bottom: 1px solid #ededed;
   height: 4.2em;
@@ -891,7 +943,7 @@ header {
   .page section .drawer-menu {
     display: block; } }
 .page section table {
-  margin: 1.5em 0; }
+  margin: 1.4em 0; }
   .page section table thead {
     background: #999999;
     color: #ffffff;
@@ -900,8 +952,7 @@ header {
     text-align: center;
     text-transform: uppercase; }
   .page section table tbody {
-    font-size: 0.75rem;
-    text-align: center; }
+    font-size: 0.75rem; }
     .page section table tbody tr {
       border-bottom: 1px solid #ededed; }
       .page section table tbody tr th {
@@ -912,6 +963,8 @@ header {
         border-right: 1px solid #ededed; }
         .page section table tbody tr td:first-of-type {
           border-left: 1px solid #ededed; }
+        .page section table tbody tr td:last-of-type {
+          min-width: 3rem; }
 
 footer {
   text-align: center; }
@@ -997,18 +1050,20 @@ footer {
     line-height: 1.27273em; }
   .page section ul {
     padding: 0 5.78313%; }
+  .page section .why-cetacea .row div {
+    padding: 0 15%; }
   .page section .gallery div > div p {
     padding: 0 5.78313%; }
   .page section .gallery div > div i {
     padding-right: 5.78313%; }
+  .page section .specs-nav ul {
+    padding: 0; }
   .page section .img-row {
     margin-right: 5.78313%;
     padding: 0 5.78313%;
     width: 29.47791%; }
     .page section .img-row:last-of-type {
       margin-right: 0; }
-  .page section table {
-    margin: 1.4em auto; }
   .page section .drawer-menu ul {
     padding: 0; }
     .page section .drawer-menu ul li a {
@@ -1020,6 +1075,13 @@ footer {
     height: 4.2em; }
     footer div:first-of-type ul li a {
       padding-top: 1.4em; } }
+@media screen and (min-width: 507px) {
+  .page .video .row h2 {
+    font-size: 1.5em;
+    padding-top: 1.2em; } }
+@media screen and (min-width: 599px) {
+  .page .video .row h2 {
+    padding-top: 1.6em; } }
 @media screen and (min-width: 600px) {
   .row:after {
     visibility: hidden;
@@ -1045,24 +1107,84 @@ footer {
   .wrap {
     padding: 0 6%; }
 
+  .page .home-promos .row figure {
+    display: block;
+    font-size: 0.75em;
+    font-weight: bold;
+    margin: 0 5% 1.4em;
+    text-align: center; }
+    .page .home-promos .row figure span {
+      color: #999999;
+      display: block;
+      font-weight: normal; }
+  .page .text-wrap-left {
+    float: right;
+    margin: 0 0 1.4em 1.4em; }
+  .page .slider {
+    border-bottom: 5px solid #ededed; }
+    .page .slider .slider-mobile {
+      display: none; }
+    .page .slider .slider-tablet {
+      display: block; }
+    .page .slider .home-banner {
+      position: relative; }
+      .page .slider .home-banner div {
+        left: 35%;
+        padding: 0;
+        position: absolute;
+        top: 2.5em; }
+        .page .slider .home-banner div h1 {
+          font-size: 1.4em;
+          margin: 0;
+          text-align: left; }
+          .page .slider .home-banner div h1 span {
+            margin-bottom: 0.875em; }
+        .page .slider .home-banner div a {
+          background: #ededed;
+          background: -moz-linear-gradient(top, rgba(237, 237, 237, 0.5) 0%, rgba(237, 237, 237, 0.5) 50%, rgba(178, 178, 178, 0.5) 100%);
+          /* FF3.6-15 */
+          background: -webkit-linear-gradient(top, rgba(237, 237, 237, 0.5) 0%, rgba(237, 237, 237, 0.5) 50%, rgba(178, 178, 178, 0.5) 100%);
+          /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to bottom, rgba(237, 237, 237, 0.5) 0%, rgba(237, 237, 237, 0.5) 50%, rgba(178, 178, 178, 0.5) 100%);
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          border: 1px solid #ffffff;
+          color: #0095da;
+          font-size: 0.75em;
+          margin: 0; }
   .page section .desktop-img {
     display: block; }
   .page section .mobile-img {
     display: none; }
   .page section ul {
     padding: 0 6%; }
+  .page section .why-cetacea {
+    padding: 1.4em 0; }
+    .page section .why-cetacea .row div {
+      margin: 0;
+      padding: 0 2%;
+      width: 33.3333%; }
   .page section article .row > div {
     margin-right: 6%; }
     .page section article .row > div:last-of-type {
       margin-right: 0; }
     .page section article .row > div p {
-      margin-bottom: 0;
       padding: 0; }
     .page section article .row > div .notice {
       padding: 6%; }
+  .page section article .dealer-form .inline-field {
+    display: inline-block; }
+  .page section article .dealer-form .telephone {
+    width: 50%; }
+  .page section article .dealer-form .extension {
+    padding-left: 6%;
+    width: 25%; }
+  .page section article .dealer-form .state {
+    width: 50%; }
   .page section .systems h3 {
     border-top: 0;
     padding-top: 0; }
+  .page section .img-padding4 {
+    width: 25%; }
   .page section .gallery {
     margin-bottom: 0; }
     .page section .gallery div > div {
@@ -1146,6 +1268,19 @@ footer {
     padding-left: 6%; }
     .page section .drawer-menu ul li a img {
       right: 6%; } }
+@media screen and (min-width: 684px) {
+  .page .video .row h2 {
+    font-size: 1.75em;
+    padding-top: 1.6em; }
+  .page .slider .home-banner div {
+    top: 3.5em; }
+    .page .slider .home-banner div h1 {
+      font-size: 1.5em; } }
+@media screen and (min-width: 767px) {
+  .page .video .row h2 {
+    padding-top: 2em; }
+  .page .slider .home-banner div h1 {
+    font-size: 1.6em; } }
 @media screen and (min-width: 768px) {
   .col3-12, .page .wrap > .row > div:first-of-type {
     float: left;
@@ -1205,23 +1340,21 @@ footer {
         font-size: 0.875em;
         line-height: 1em;
         margin: 0 2.92683% 0 0;
-        padding: 0.7em 0;
+        padding: 0.7em 0 1.75em;
         position: relative; }
         header nav ul li span {
           display: none; }
-        header nav ul li:nth-of-type(5) {
-          padding-bottom: 0.8em; }
-          header nav ul li:nth-of-type(5) ul {
-            left: auto;
-            right: 0; }
-            header nav ul li:nth-of-type(5) ul li a {
-              text-align: right; }
+        header nav ul li:nth-of-type(5) ul {
+          left: auto;
+          right: 0; }
+          header nav ul li:nth-of-type(5) ul li a {
+            text-align: right; }
         header nav ul li ul {
-          padding: 0.8em 0 0 0;
+          padding: 0;
           position: absolute;
           left: 0;
-          top: 33px;
-          width: 15.4em; }
+          top: 48px;
+          width: 17em; }
           header nav ul li ul li {
             cursor: default;
             float: none;
@@ -1232,7 +1365,7 @@ footer {
               background: none;
               border: none; }
             header nav ul li ul li:first-of-type {
-              margin-top: 4px; }
+              margin-top: 0; }
             header nav ul li ul li:last-of-type {
               padding-bottom: 0; }
             header nav ul li ul li a {
@@ -1240,16 +1373,14 @@ footer {
               padding: 0.7em;
               text-align: left; }
               header nav ul li ul li a:hover {
-                background-color: rgba(0, 149, 218, 0.8);
+                background-color: #0095da;
                 cursor: pointer; }
         header nav ul li:hover ul {
-          background-color: rgba(0, 87, 137, 0.8);
+          background-color: #005789;
           display: block;
           z-index: 100; }
     header nav .mobile-search {
       display: none; }
-    header nav .top-nav-active {
-      border-bottom: 3px solid #0095da; }
     header nav .lit-menu {
       text-align: left;
       padding-left: 0.8em; }
@@ -1275,6 +1406,8 @@ footer {
         right: 5px;
         top: 18px; }
 
+  .page a:hover {
+    color: #999999; }
   .page .category-headline {
     padding-left: 3.125%;
     text-align: left; }
@@ -1298,72 +1431,110 @@ footer {
           padding: 0 15.625% 0.7em; }
           .page .left-nav ul li a:hover {
             color: #999999; }
-      .page .left-nav ul .left-nav-active a {
-        color: #0095da;
+      .page .left-nav ul .left-nav-active {
         font-weight: bold; }
+  .page .slider .home-banner div {
+    top: 4em; }
+    .page .slider .home-banner div h1 {
+      font-size: 1.8em; }
+  .page .why-cetacea .row {
+    margin-bottom: 0; }
+  .page .home-promos .row {
+    margin-top: 0; }
+    .page .home-promos .row figure {
+      font-size: 1em; }
+  .page .video .row {
+    margin-top: 0; }
+    .page .video .row h2 {
+      font-size: 2em;
+      padding-top: 2em; }
+  .page section article .dealer-form {
+    width: 75%; }
+  .page section .row {
+    margin: 1.4em 0; }
   .page section .drawer-menu {
     display: none; }
+  .page section .why-cetacea h2 {
+    font-size: 1.5em; }
+  .page section .why-cetacea .row div {
+    padding: 1.4em 5%; }
+    .page section .why-cetacea .row div h3 {
+      font-size: 1.4em;
+      line-height: 1.4em;
+      padding: 0.25em 0;
+      width: 2em; }
+    .page section .why-cetacea .row div p {
+      font-size: 1.11111em; }
   .page .specs-nav ul li {
     cursor: pointer; }
 
-  footer {
-    margin-top: 1.4em; }
-    footer > div:first-of-type ul {
-      padding: 0 3.125%; }
-      footer > div:first-of-type ul li {
-        border-bottom: 1px solid #ffffff;
-        border-right: 1px solid #ffffff;
-        font-weight: normal;
-        width: 25%; }
-        footer > div:first-of-type ul li:hover {
-          background: #0095da; }
-          footer > div:first-of-type ul li:hover a {
-            color: #ffffff; }
-        footer > div:first-of-type ul li:first-of-type {
-          border-left: 1px solid #ffffff; }
-    footer > div:nth-of-type(2) {
-      padding: 1.4em 0; }
-      footer > div:nth-of-type(2):after {
-        visibility: hidden;
-        display: block;
-        font-size: 0;
-        content: " ";
-        clear: both;
-        height: 0; }
-      footer > div:nth-of-type(2) div ul {
-        float: right;
-        padding: 0;
-        padding-right: 3.125%; }
-        footer > div:nth-of-type(2) div ul li {
-          height: auto;
-          list-style-type: none;
-          margin-right: 1.4rem;
-          text-align: left; }
-          footer > div:nth-of-type(2) div ul li:last-of-type {
-            margin-right: 0; }
-          footer > div:nth-of-type(2) div ul li a {
-            font-size: 0.875em;
-            line-height: 1.6em;
-            padding-top: 0; }
-            footer > div:nth-of-type(2) div ul li a:hover {
-              color: #0095da; }
-      footer > div:nth-of-type(2) div p {
-        float: left;
-        font-size: 0.875em;
-        line-height: 1.6em;
-        padding: 0;
-        padding-left: 3.125%; }
-        footer > div:nth-of-type(2) div p span {
-          display: inline-block; }
-          footer > div:nth-of-type(2) div p span img {
-            padding-left: 0.7em; } }
+  footer > div:first-of-type ul {
+    padding: 0 3.125%; }
+    footer > div:first-of-type ul li {
+      border-bottom: 1px solid #ffffff;
+      border-right: 1px solid #ffffff;
+      font-weight: normal;
+      width: 25%; }
+      footer > div:first-of-type ul li:hover {
+        background: #0095da; }
+        footer > div:first-of-type ul li:hover a {
+          color: #ffffff; }
+      footer > div:first-of-type ul li:first-of-type {
+        border-left: 1px solid #ffffff; }
+  footer > div:nth-of-type(2) {
+    padding: 1.4em 0; }
+    footer > div:nth-of-type(2):after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: " ";
+      clear: both;
+      height: 0; }
+    footer > div:nth-of-type(2) div ul {
+      float: right;
+      padding: 0;
+      padding-right: 3.125%; }
+      footer > div:nth-of-type(2) div ul li {
+        height: auto;
+        list-style-type: none;
+        margin-right: 1.4rem;
+        text-align: left; }
+        footer > div:nth-of-type(2) div ul li:last-of-type {
+          margin-right: 0; }
+        footer > div:nth-of-type(2) div ul li a {
+          font-size: 0.875em;
+          line-height: 1.6em;
+          padding-top: 0; }
+          footer > div:nth-of-type(2) div ul li a:hover {
+            color: #0095da; }
+    footer > div:nth-of-type(2) div p {
+      float: left;
+      font-size: 0.875em;
+      line-height: 1.6em;
+      padding: 0;
+      padding-left: 3.125%; }
+      footer > div:nth-of-type(2) div p span {
+        display: inline-block; }
+        footer > div:nth-of-type(2) div p span img {
+          padding-left: 0.7em; } }
+@media screen and (min-width: 864px) {
+  .page .slider .home-banner div {
+    top: 5.5em; }
+    .page .slider .home-banner div h1 {
+      font-size: 2em; } }
+@media screen and (min-width: 960px) {
+  .page .slider .home-banner div h1 {
+    font-size: 2.2em; }
+  .page .video .row h2 {
+    padding-top: 3em; } }
 @media screen and (min-width: 1025px) {
   body {
     background: #ffffff; }
 
   .wrap {
     margin: auto;
-    max-width: 1024px; }
+    max-width: 1024px;
+    padding: 0 1.77778em; }
 
   .desktop-wrap {
     background: #ffffff; }
@@ -1376,7 +1547,13 @@ footer {
     font-size: 1em;
     line-height: 1.4em; }
     .page .left-nav ul li a {
-      padding: 0 15.625% 0.7em; }
+      padding: 0 15.625% 0.7em 0; }
+  .page section .why-cetacea h2 span {
+    display: inline; }
+  .page .slider .home-banner div {
+    top: 6.5em; }
+    .page .slider .home-banner div h1 {
+      font-size: 2.3em; }
 
   footer div:first-of-type ul {
     margin: auto;

@@ -46,6 +46,13 @@
       ul {
         padding: 0 (24/415)*100%;
       }
+      .why-cetacea {
+        .row {
+          div {
+            padding: 0 15%;
+          }
+        }
+      }
       .gallery {
         div > div {
           p {
@@ -56,6 +63,11 @@
           }
         }
       }
+      .specs-nav {
+        ul {
+          padding: 0;
+        }
+      }
       .img-row {
         margin-right: (24/415)*100%;
         padding: 0 (24/415)*100%;
@@ -63,9 +75,6 @@
         &:last-of-type {
           margin-right: 0;
         }
-      }
-      table {
-        margin: 1.4em auto;
       }
       .drawer-menu {
         ul {
@@ -96,5 +105,17 @@
       }
     }
   }
+}
 
+@media screen and (min-width: 507px) {
+  .page .video .row h2 {
+    font-size: 1.5em;
+    padding-top: 1.2em;
+  }
+}
+
+@media screen and (min-width: 599px) {
+  .page .video .row h2 {
+    padding-top: 1.6em;
+  }
 }

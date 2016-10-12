@@ -8,6 +8,7 @@
   .wrap {
     margin: auto;
     max-width: 1024px;
+    padding: 0 (32/18)*1em;
   }
 
   .desktop-wrap {
@@ -28,7 +29,26 @@
       ul {
         li {
           a {
-            padding: 0 (24/(768/5))*100% 0.7em;
+            padding: 0 (24/(768/5))*100% 0.7em 0;
+          }
+        }
+      }
+    }
+    section {
+      .why-cetacea {
+        h2 {
+          span {
+            display: inline;
+          }
+        }
+      }
+    }
+    .slider {
+      .home-banner {
+        div {
+          top: 6.5em;
+          h1 {
+            font-size: 2.3em;
           }
         }
       }

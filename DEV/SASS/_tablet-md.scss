@@ -8,6 +8,67 @@
 
   // standard page styling
   .page {
+    .home-promos {
+      .row {
+        figure {
+          display: block;
+          font-size: 0.75em;
+          font-weight: bold;
+          margin: 0 5% 1.4em;
+          text-align: center;
+          span {
+            color: $dk-grey;
+            display: block;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+    .text-wrap-left {
+      float: right;
+      margin: 0 0 1.4em 1.4em;
+    }
+    .slider {
+      border-bottom: 5px solid $grey;
+      .slider-mobile {
+        display: none;
+      }
+      .slider-tablet {
+        display: block;
+      }
+      .home-banner {
+        position: relative;
+        div {
+          left: 35%;
+          padding: 0;
+          position: absolute;
+          top: 2.5em;
+          h1 {
+            font-size: 1.4em;
+            margin: 0;
+            text-align: left;
+            span {
+              margin-bottom: 0.875em;
+            }
+          }
+          a {
+            background: $grey;
+
+            background: -moz-linear-gradient(top, rgba(237,237,237,0.5) 0%, rgba(237,237,237,0.5) 50%, rgba(178,178,178,0.5) 100%); /* FF3.6-15 */
+
+            background: -webkit-linear-gradient(top, rgba(237,237,237,0.5) 0%,rgba(237,237,237,0.5) 50%,rgba(178,178,178,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+
+            background: linear-gradient(to bottom, rgba(237,237,237,0.5) 0%,rgba(237,237,237,0.5) 50%,rgba(178,178,178,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+            border: 1px solid $white;
+            color: $lt-blue;
+            font-size: 0.75em;
+            margin: 0;
+            // width: 6.5em;
+          }
+        }
+      }
+    }
     section {
       .desktop-img {
         display: block;
@@ -18,6 +79,16 @@
       ul {
         padding: 0 (36/600)*100%;
       }
+      .why-cetacea {
+        padding: 1.4em 0;
+        .row {
+          div {
+            margin: 0;
+            padding: 0 2%;
+            width: 33.3333%;
+          }
+        }
+      }
       article {
         .row {
           &>div {
@@ -27,7 +98,6 @@
               margin-right: 0;
             }
             p {
-              margin-bottom: 0;
               padding: 0;
             }
             .notice {
@@ -35,12 +105,31 @@
             }
           }
         }
+        .dealer-form {
+          .inline-field {
+            display: inline-block;
+          }
+          .telephone {
+            width: 50%;
+          }
+          .extension {
+            padding-left: 6%;
+            width: 25%;
+          }          
+          .state {
+            width: 50%;
+          }
+        }
       }
+
       .systems {
         h3 {
           border-top: 0;
           padding-top: 0;
         }
+      }
+      .img-padding4 {
+        width: 25%;
       }
       .gallery {
         margin-bottom: 0;
@@ -157,5 +246,48 @@
       }
     }
   }
+}
 
+@media screen and (min-width: 684px) {
+  .page {
+    .video {
+      .row {
+        h2 {
+          font-size: 1.75em;
+          padding-top: 1.6em;
+        }
+      }
+    }
+    .slider {
+      .home-banner {
+        div {
+          top: 3.5em;
+          h1 {
+            font-size: 1.5em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .page {
+    .video {
+      .row {
+        h2 {
+          padding-top: 2em;
+        }
+      }
+    }
+    .slider {
+      .home-banner {
+        div {
+          h1 {
+            font-size: 1.6em;
+          }
+        }
+      }
+    }
+  }
 }

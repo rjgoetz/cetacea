@@ -1,3 +1,5 @@
+<?php include '../includes/siteroot.php'; ?>
+
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
@@ -11,8 +13,8 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:600,300|Rosario' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="../css/style.css" type="text/css">
-        <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
+        <link rel="stylesheet" href="<?php echo $siteroot; ?>/css/style.css" type="text/css">
+        <script src="<?php echo $siteroot; ?>/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -21,16 +23,13 @@
 
         <!--page header-->
         <?php include '../includes/page-header.php'; ?>
-        <script>
-          var topNav = 'products';
-        </script>
         <!--end page header-->
 
         <!--main section-->
         <main class="page">
           <section>
             <div class="desktop-img-wrap">
-              <img class="desktop-img" src="../img/astronaut-speaker-system-banner.jpg" alt="">
+              <img class="desktop-img" src="../img/orbiter-pendant-microphone-banner.jpg" alt="Orbiter pendant microphone banner">
               <h1 class="category-headline">Orbiter &dash; Pendant Microphone</h1>
             </div>
 
@@ -39,17 +38,9 @@
               <div class="row">
                 <!-- start column -->
                 <div>
-                  <aside class="left-nav">
-                    <nav>
-                      <ul>
-                        <li class="left-nav-active"><a href="index.php">Overview</a></li>
-                        <li><a href="ergonomics/">Ergonomics</a></li>
-                        <li><a href="installation/">Installation</a></li>
-                        <li><a href="system-bundles/">System Bundles</a></li>
-                        <li><a href="specs/">Tech Specs</a></li>
-                      </ul>
-                    </nav>
-                  </aside>
+                  <!-- start left nav -->
+                  <?php include '../includes/orbiter-left-nav.php'; ?>
+                  <!-- end left nav -->
                 </div>
                 <!-- end column -->
                 <!-- start column -->
@@ -69,7 +60,7 @@
                         </p>
                       </div>
                       <div>
-                        <img class="img-padding" src="../img/2-4ghz.jpg" alt="">
+                        <img class="img-padding3" src="../img/2-4ghz.jpg" alt="2.4Gz RF">
                       </div>
                     </div>
                   </article>
@@ -81,10 +72,10 @@
                         <p>
                           The Orbiter’s lightweight design, easy-to-use lanyard, and ergonomic button controls make for comfortable, all-day use. And of course, the Orbiter looks good too.
                         </p>
-                        <p class="link-p"><a href="ergonomics/">Learn about Orbiter ergonomics. ></a></p>
+                        <p class="link-p"><a href="ergonomics">Learn about Orbiter ergonomics. &nbsp;></a></p>
                       </div>
                       <div>
-                        <img class="img-padding3" src="../img/orbiter-pendant-ergonomics.jpg" alt="">
+                        <img class="img-padding3" src="../img/orbiter-pendant-ergonomics.jpg" alt="Orbiter pendant microphone side view">
                       </div>
                     </div>
                   </article>
@@ -96,10 +87,10 @@
                         <p>
                           The Orbiter, with its RF technology requires less hardware and cabling than IR microphone systems, allowing for quick and cost-effective installations.
                         </p>
-                        <p class="link-p"><a href="#">Learn about installing the Orbiter. ></a></p>
+                        <p class="link-p"><a href="installation">Learn about installing the Orbiter. &nbsp;></a></p>
                       </div>
                       <div>
-                        <img src="../img/astronaut-orbiter-desktop-installation.svg" alt="">
+                        <img src="../img/astronaut-orbiter-desktop-installation.svg" alt="Orbiter and Astronaut installation diagram">
                       </div>
                     </div>
                   </article>
@@ -111,20 +102,7 @@
             <!-- end page wrap -->
 
             <!--sub menu-->
-            <nav class="drawer-menu">
-              <div>
-                <div class="sub-menu-btn">
-                  <img src="../img/chevron-up.svg" alt="">
-                </div>
-              </div>
-              <ul>
-                <li><a class="active" href="index.php">Overview<img src="../img/chevron-rt-wht.svg" alt=""></a></li>
-                <li><a href="ergonomics/">Ergonomics<img src="../img/chevron-rt-wht.svg" alt=""></a></li>
-                <li><a href="installation/">Installation<img src="../img/chevron-rt-wht.svg" alt=""></a></li>
-                <li><a href="system-bundles/">System Bundles<img src="../img/chevron-rt-wht.svg" alt=""></a></li>
-                <li><a href="specs/">Tech Specs<img src="../img/chevron-rt-wht.svg" alt=""></a></li>
-              </ul>
-            </nav>
+            <?php include '../includes/orbiter-sub-nav.php'; ?>
             <!--end sub menu-->
           </section>
         </main>
@@ -135,17 +113,6 @@
         <!--end footer section-->
 
         <!-- j/s -->
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="../js/plugins.js"></script>
-        <script src="../js/main.js"></script>
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
+        <?php include '../includes/scripts.php'; ?>
     </body>
 </html>

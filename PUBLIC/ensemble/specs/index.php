@@ -1,3 +1,5 @@
+<?php include '../../includes/siteroot.php'; ?>
+
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
@@ -11,8 +13,8 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:600,300|Rosario' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="../../css/style.css" type="text/css">
-        <script src="../../js/vendor/modernizr-2.8.3.min.js"></script>
+        <link rel="stylesheet" href="<?php echo $siteroot; ?>/css/style.css" type="text/css">
+        <script src="<?php echo $siteroot; ?>/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -21,16 +23,13 @@
 
         <!--page header-->
         <?php include '../../includes/page-header.php'; ?>
-        <script>
-          var topNav = 'products';
-        </script>
         <!--end page header-->
 
         <!--main section-->
         <main class="page">
           <section>
             <div class="desktop-img-wrap">
-              <img class="desktop-img" src="../../img/astronaut-speaker-system-banner.jpg" alt="">
+              <img class="desktop-img" src="../../img/ensemble-speaker-system-banner.jpg" alt="Ensemble portable speaker system banner">
               <h1 class="category-headline">Ensemble &dash; Portable Desktop Speaker</h1>
             </div>
 
@@ -39,23 +38,14 @@
               <div class="row">
                 <!-- start column -->
                 <div>
-                  <aside class="left-nav">
-                    <nav>
-                      <ul>
-                        <li><a href="../../index.php">Overview</a></li>
-                        <li><a href="../../public-address/">Public Address</a></li>
-                        <li><a href="../../product-configurations/">Systems</a></li>
-                        <li><a href="../../hookup-diagrams/">Hookup Diagrams"</a></li>
-                        <li><a href="../../room-arrangements/">Room Arrangements</a></li>
-                        <li class="left-nav-active"><a href="index.php">Tech Specs</a></li>
-                      </ul>
-                    </nav>
-                  </aside>
+                  <!-- start left nav -->
+                  <?php include '../../includes/ensemble-left-nav.php'; ?>
+                  <!-- end left nav -->
                 </div>
                 <!-- end column -->
                 <!-- start column -->
                 <div>
-                  <h1>Tech Specs</span></h1>
+                  <h1>Tech Specs</h1>
 
                   <article class="specs">
                     <h2>Ensemble Specs</h2>
@@ -67,7 +57,7 @@
                       <li>System No. ENS-903-ORB</li>
                       <li>Model No. ENS-903-SAT</li>
                     </ul>
-                    <div class="row">
+                    <!-- <div class="row"> -->
                       <div>
                         <h3>Electrical</h3>
                         <ul>
@@ -97,8 +87,8 @@
                           150 Hz - 17 kHz @ -3 dB</li>
                         </ul>
                       </div>
-                    </div>
-                    <div class="row">
+                    <!-- </div> -->
+                    <!-- <div class="row"> -->
                       <div>
                         <h3>Weight and Dimensions</h3>
                         <ul>
@@ -128,9 +118,14 @@
                         <p>
                           One year on all components.
                         </p>
-                        <img class="img-padding" src="../../img/ensemble-measurements.jpg" alt="ensemble with measurements">
                       </div>
-                    </div>
+                      <div class="row">
+                        <div>
+                          <img class="img-padding3" src="../../img/ensemble-measurements.jpg" alt="ensemble with measurements">
+                        </div>
+
+                      </div>
+                    <!-- </div> -->
 
                   </article>
 
@@ -142,21 +137,7 @@
             <!-- end page wrap -->
 
             <!--sub menu-->
-            <nav class="drawer-menu">
-              <div>
-                <div class="sub-menu-btn">
-                  <img src="../../img/chevron-up.svg" alt="">
-                </div>
-              </div>
-              <ul>
-                <li><a href="../index.php">Overview<img src="../../img/chevron-rt-wht.svg" alt=""></a></li>
-                <li><a href="../public-address/">Public Address<img src="../../img/chevron-rt-wht.svg" alt=""></a></li>
-                <li><a href="../installation/">Installation<img src="../../img/chevron-rt-wht.svg" alt=""></a></li>
-                <li><a href="../product-configurations/">System Bundles<img src="../../img/chevron-rt-wht.svg" alt=""></a></li>
-                <li><a href="../room-arrangements/">Room Arrangements<img src="../../img/chevron-rt-wht.svg" alt=""></a></li>
-                <li><a class="active" href="index.php">Tech Specs<img src="../../img/chevron-rt-wht.svg" alt=""></a></li>
-              </ul>
-            </nav>
+            <?php include '../../includes/ensemble-sub-nav.php'; ?>
             <!--end sub menu-->
           </section>
         </main>
@@ -167,17 +148,6 @@
         <!--end footer section-->
 
         <!-- j/s -->
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="../../js/plugins.js"></script>
-        <script src="../../js/main.js"></script>
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
+        <?php include '../../includes/scripts.php'; ?>
     </body>
 </html>
